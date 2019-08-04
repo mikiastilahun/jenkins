@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'mikeabebe/node-test' } }
+    agent { docker { image 'index.docker.io/mikeabebe/node-test' } }
     stages {
         stage('build') {
             steps {
