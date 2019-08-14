@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying..'
-                sh "exho \$0 "
+                sh "echo \$0 "
                  }
         }
     }
