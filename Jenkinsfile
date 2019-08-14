@@ -15,8 +15,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                s3Upload consoleLogLevel: 'INFO', dontWaitForConcurrentBuildCompletion: true, entries: [[bucket: 'dober', includedFile: 'index.html', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: false, showDirectlyInBrowser: false,  storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'desta-test', userMetadata: []
-            }
+                sh "aws s3 sync . s3://desta-test "
+                 }
         }
     }
 }
