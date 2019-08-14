@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'this is from the fork'
+                echo 'this is test for pull request test'
             }
         }
         stage('Test') {
