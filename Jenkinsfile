@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Deploying..'
                 sh "ls ~/.aws/"
-                sh "cat ~/.aws/config"
+                sh "sudo cat ~/.aws/config"
                 sh "sudo aws s3 sync . s3://desta-test"
                  }
         }
