@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Deploying..'
                 sh "ls"
-                sh "echo \$0"
+                sh "aws s3 sync . s3://desta-test"
                  }
         }
     }
