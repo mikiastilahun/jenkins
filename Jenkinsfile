@@ -1,10 +1,11 @@
+#!/bin/bash
 pipeline {
     agent any
 
     stages {
         stage('Build') {
             steps {
-                echo 'this is from the fork'
+                echo 'this is test for pull request test just some changes'
             }
         }
         stage('Test') {
@@ -14,8 +15,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
-            }
+                echo 'Deploying..'
+                sh "ls"
+                sh "echo \$0"
+                 }
         }
     }
 }
