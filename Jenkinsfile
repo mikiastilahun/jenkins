@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
+                echo 'Deploying..'
                 sh "aws s3 sync . s3://desta-test "
                  }
         }
