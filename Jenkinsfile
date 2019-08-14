@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                s3Upload consoleLogLevel: 'INFO', dontWaitForConcurrentBuildCompletion: true, entries: [[bucket: 'dober', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: false, showDirectlyInBrowser: false, includePathPattern: "*" ,verbose: true, storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'desta-test', userMetadata: []
+                s3Upload consoleLogLevel: 'INFO', dontWaitForConcurrentBuildCompletion: true,includePathPattern: "*" ,verbose: true, entries: [[bucket: 'dober', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: false, showDirectlyInBrowser: false,  storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'FAILURE', profileName: 'desta-test', userMetadata: []
             }
         }
     }
