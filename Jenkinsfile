@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                s3Upload (entries: "what")
+                s3Upload (entries: [bucket: "desta-test", file: "index.html"])
             }
         }
     }
