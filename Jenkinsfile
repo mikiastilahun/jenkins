@@ -1,9 +1,20 @@
 pipeline {
-    agent { docker { image 'index.docker.io/mikeabebe/node-test:v1' } }
+    agent any
+
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'echo "jenkins is working fine"'
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
