@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'this is test for pull request test'
+                echo 'this is test for pull request test just some changes'
             }
         }
         stage('Test') {
